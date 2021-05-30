@@ -36,4 +36,3 @@ routes.post('/books', bookController.create);
 routes.post('/upload', upload.single('file'), bookController.getPhotoUrl);
 //Routes email
 routes.post('/email', sendMailController.execute);
-//# sourceMappingURL=routes.js.map

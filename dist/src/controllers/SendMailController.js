@@ -68,4 +68,3 @@ var SendMailController = /** @class */ (function () {
     return SendMailController;
 }());
 exports.SendMailController = SendMailController;
-//# sourceMappingURL=SendMailController.js.map

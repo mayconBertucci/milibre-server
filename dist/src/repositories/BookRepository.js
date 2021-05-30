@@ -35,4 +35,3 @@ var BookRepository = /** @class */ (function (_super) {
     return BookRepository;
 }(typeorm_1.Repository));
 exports.BookRepository = BookRepository;
-//# sourceMappingURL=BookRepository.js.map

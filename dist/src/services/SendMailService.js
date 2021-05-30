@@ -80,4 +80,3 @@ var SendMailService = /** @class */ (function () {
     return SendMailService;
 }());
 exports.default = new SendMailService();
-//# sourceMappingURL=SendMailService.js.map

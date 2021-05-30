@@ -15,4 +15,3 @@ app.use(express_1.default.urlencoded({ limit: "50mb", extended: true, parameterL
 app.use(cors_1.default());
 app.use(routes_1.routes);
 app.listen(Number(process.env.PORT), process.env.HOST, function () { return console.log("Server is running on port " + process.env.PORT); });
-//# sourceMappingURL=server.js.map
