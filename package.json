@@ -9,7 +9,7 @@
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
     "mgr": "node node_modules/typeorm/cli.js",
     "migration-run": "yarn mgr migration:run",
-    "start": "mgr migration-run node dist/src/server.js"
+    "start": "mgr && migration-run && node dist/src/server.js"
   },
   "dependencies": {
     "aws-sdk": "^2.903.0",
