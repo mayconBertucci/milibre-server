@@ -7,7 +7,9 @@
     "build": "tsc",
     "dev": "ts-node-dev src/server.ts",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
-    "start": "node dist/src/server.js"
+    "mgr": "node node_modules/typeorm/cli.js",
+    "migration-run": "yarn mgr migration:run",
+    "start": "migration-run node dist/src/server.js"
   },
   "dependencies": {
     "aws-sdk": "^2.903.0",
