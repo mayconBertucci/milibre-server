@@ -50,7 +50,6 @@ exports.default = (function (req, res, next) { return __awaiter(void 0, void 0, 
             next();
         }
         catch (err) {
-            console.error(err.message);
             return [2 /*return*/, res.status(400).json('Invalid Token')];
         }
         return [2 /*return*/];

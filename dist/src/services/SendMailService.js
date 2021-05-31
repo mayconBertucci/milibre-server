@@ -69,7 +69,7 @@ var SendMailService = /** @class */ (function () {
                         })];
                     case 1:
                         message = _a.sent();
-                        console.log(message);
+                        
                         console.log('Message sent: %s', message.messageId);
                         console.log('Preview URL: %s', nodemailer_1.default.getTestMessageUrl(message));
                         return [2 /*return*/];
