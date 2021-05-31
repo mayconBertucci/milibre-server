@@ -1,14 +1,14 @@
 {
     "type": "postgres",
-    "host": "localhost",
+    "host": "ec2-54-220-35-19.eu-west-1.compute.amazonaws.com",
     "port": 5432,
-    "username": "postgres",
-    "password": "postgres",
-    "database": "postgres",
-    "synchronize": true,
-    "migrations": ["./src/database/migrations/**{.ts,.js}"],
-    "entities": ["./src/entities/**{.ts,.js}"],
+    "username": "fwoygwgksjqmsx",
+    "password": "f72f694cb7c9e7271c2a9087629c54e2ff4b15844162cf3253fccc86a91df1b0",
+    "database": "d9tl6lpi5g0djl",
+    "synchronize": false,
+    "migrations": ["dist/src/database/migrations/**{.ts,.js}"],
+    "entities": ["dist/src/entities/**{.ts,.js}"],
     "cli": {
-        "migrationsDir": "./src/database/migrations"
+        "migrationsDir": "dist/src/database/migrations"
     } 
 }
