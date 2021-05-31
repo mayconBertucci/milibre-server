@@ -5,7 +5,7 @@
     "username": "fwoygwgksjqmsx",
     "password": "f72f694cb7c9e7271c2a9087629c54e2ff4b15844162cf3253fccc86a91df1b0",
     "database": "d9tl6lpi5g0djl",
-    "synchronize": true,
+    "synchronize": false,
     "migrations": ["dist/src/database/migrations/**{.ts,.js}"],
     "entities": ["dist/src/entities/**{.ts,.js}"],
     "cli": {
