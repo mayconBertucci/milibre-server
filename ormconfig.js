@@ -2,8 +2,8 @@ require('dotenv').config();
 
 module.exports = [
     {
-        name: process.env.DATABASE_NAME,
         type: 'postgres',
+        name: process.env.DATABASE_NAME,
         url: process.env.DATABASE_URL,
         synchronize: true,
         logging: false,
