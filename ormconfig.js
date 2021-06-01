@@ -11,6 +11,9 @@ module.exports = [
         cli: {
             migrationsDir: 'dist/src/database/migrations'
         },
+        ssl: {
+            rejectUnauthorized: false
+        },
         migrationsRun: true
     },
     /* {
