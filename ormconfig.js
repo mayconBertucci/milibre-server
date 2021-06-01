@@ -2,16 +2,16 @@ require('dotenv').config();
 
 module.exports = [
     {
-        type: 'postgres',
-        name: process.env.DATABASE_NAME,
+        type: `postgres`,
         url: process.env.DATABASE_URL,
-        synchronize: true,
+        synchronize: false,
         logging: false,
         entities: ["dist/src/entities/**{.ts,.js}"],
         migrations: ["dist/src/database/migrations/**{.ts,.js}"],
         cli: {
             migrationsDir: 'dist/src/database/migrations'
         },
+        migrationsRun: true
     },
     /* {
         name: 'milibreBD',
