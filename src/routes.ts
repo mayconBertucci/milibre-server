@@ -32,9 +32,9 @@ routes.patch('/user-points/:id', userController.setPoints);
 routes.get('/books', bookController.show);
 routes.get('/books-search/:titol', bookController.searchBook);
 routes.get('/books-user/:id', bookController.showBooksUser);
-routes.get('/books/:id', bookController.getById);
+routes.get('/books/:id', authorization, bookController.getById);
 routes.post('/books', bookController.create);
-routes.post('/upload', upload.single('file'), bookController.getPhotoUrl);
+routes.post('/upload', authorization, upload.single('file'), bookController.getPhotoUrl);
 
 //Routes email
 routes.post('/email', sendMailController.execute);
