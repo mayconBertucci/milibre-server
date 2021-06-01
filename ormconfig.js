@@ -14,7 +14,7 @@ module.exports = [
         ssl: {
             rejectUnauthorized: false
         },
-        migrationsRun: true
+        migrationsRun: false
     },
     /* {
         name: 'milibreBD',
