@@ -13,7 +13,7 @@ module.exports = [
             migrationsDir: 'dist/src/database/migrations'
         },
     },
-    {
+    /* {
         name: 'milibreBD',
         type: 'postgres',
         host: process.env.POSTGRES_HOST,
@@ -28,6 +28,6 @@ module.exports = [
         cli: {
             migrationsDir: 'dist/src/database/migrations'
         },
-    },
+    }, */
 ];
 
