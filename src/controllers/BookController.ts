@@ -71,7 +71,7 @@ class BookController {
                 : description = '';
 
             const book = await bookService.create({
-                titol: response.data.volumeInfo.title.toString(),
+                title: response.data.volumeInfo.title.toString(),
                 author: authorTemp,
                 isbn: identifier,
                 genre: categories,
@@ -135,12 +135,12 @@ class BookController {
 
     async searchBook(req: MulterRequest, res: Response) {
         try {
-            const titol = req.params.titol;
+            const title = req.params.title;
 
             const books = await getRepository(Book)
                 .createQueryBuilder('book')
                 .leftJoinAndSelect('book.user', 'user')
-                .where('LOWER(book.titol) LIKE LOWER(:titol)', { titol: `%${titol}%` })
+                .where('LOWER(book.title) LIKE LOWER(:title)', { title: `%${title}%` })
                 .getMany();
             return res.json(books);
 

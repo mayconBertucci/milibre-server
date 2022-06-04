@@ -9,7 +9,7 @@ class Book {
     id: string;
 
     @Column()
-    titol: string;
+    title: string;
 
     @Column({
         nullable: true

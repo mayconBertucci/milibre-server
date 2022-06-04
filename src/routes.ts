@@ -30,7 +30,7 @@ routes.patch('/user-points/:id', userController.setPoints);
 
 //Routes Book
 routes.get('/books', bookController.show);
-routes.get('/books-search/:titol', bookController.searchBook);
+routes.get('/books-search/:title', bookController.searchBook);
 routes.get('/books-user/:id', bookController.showBooksUser);
 routes.get('/books/:id', bookController.getById);
 routes.post('/books', bookController.create);

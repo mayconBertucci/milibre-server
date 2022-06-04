@@ -2,7 +2,7 @@ import { getCustomRepository } from "typeorm";
 import { BookRepository } from "../repositories/BookRepository";
 
 interface IBookCreate {
-    titol: string,
+    title: string,
     author: string,
     isbn: string,
     genre: string,
@@ -15,7 +15,7 @@ interface IBookCreate {
 
 class BookService {
     async create ({
-        titol,
+        title,
         author,
         isbn,
         genre,
@@ -28,7 +28,7 @@ class BookService {
         const bookRepository = getCustomRepository(BookRepository);
     
         const book = bookRepository.create({
-            titol,
+            title,
             author,
             isbn,
             genre,
