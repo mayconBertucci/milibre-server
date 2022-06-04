@@ -5,7 +5,7 @@ import { UserController } from './controllers/UserController';
 import { SendMailController } from './controllers/SendMailController';
 import authorization from './middleware/authorization';
 import multer from 'multer';
-import multerConfig from './config/multer.js'
+import multerConfig from './config/multer'
 
 
 const routes = Router();
@@ -17,7 +17,7 @@ const bookController = new BookController();
 const sendMailController = new SendMailController();
 
 
-//Router Autentication
+//Router Authentication
 routes.post('/auth', authController.authenticate);
 
 //Routes User

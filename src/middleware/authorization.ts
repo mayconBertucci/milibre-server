@@ -5,7 +5,7 @@ export default async (req: Request, res: Response, next: NextFunction) => {
   try {
     const token = req.headers;
     if (!token) {
-      return res.status(400).json({message: 'No autorizado'});
+      return res.status(401).json({message: 'No authorized'});
     }
     
     const payload = verify(token.authorization, process.env.JWT_SECRET);
@@ -13,6 +13,6 @@ export default async (req: Request, res: Response, next: NextFunction) => {
     next();
 
   } catch (err) {
-    return res.status(400).json('Invalid Token');
+    return res.status(401).json('Invalid Token');
   }
 };
