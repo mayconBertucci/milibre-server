@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "dev": "ts-node-dev src/server.ts",
+    "build": "tsc",
     "typeormdev": "ts-node-dev node_modules/typeorm/cli.js",
     "mgr": "node node_modules/typeorm/cli.js",
     "run": "yarn mgr migration:run",
