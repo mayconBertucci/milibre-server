@@ -1,6 +1,4 @@
-import dontenv from 'dotenv';
-
-dontenv.config();
+require('dotenv').config();
 
 const localConfig = {
     type: 'postgres',
