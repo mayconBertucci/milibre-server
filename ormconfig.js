@@ -34,5 +34,5 @@ const productionConfig = {
 
 const config = process.env.NODE_ENV === 'development' ? localConfig : productionConfig;
 
-export default [config];
+module.exports = [config];
 
