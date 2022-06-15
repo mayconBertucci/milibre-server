@@ -24,17 +24,17 @@ routes.post('/auth', authController.authenticate);
 routes.get('/users', userController.show);
 routes.get('/users/:id', userController.findOne);
 routes.post('/users', userController.create);
-routes.post('/upload/:id', upload.single('file'), userController.updatePhoto);
-routes.patch('/user-num-books/:id', userController.setNumBooks);
-routes.patch('/user-points/:id', userController.setPoints);
+routes.post('/upload/:id', authorization, upload.single('file'), userController.updatePhoto);
+routes.patch('/user-num-books/:id', authorization,  userController.setNumBooks);
+routes.patch('/user-points/:id', authorization,  userController.setPoints);
 
 //Routes Book
 routes.get('/books', bookController.show);
 routes.get('/books-search/:title', bookController.searchBook);
 routes.get('/books-user/:id', bookController.showBooksUser);
 routes.get('/books/:id', bookController.getById);
-routes.post('/books', bookController.create);
-routes.post('/upload', upload.single('file'), bookController.getPhotoUrl);
+routes.post('/books', authorization, bookController.create);
+routes.post('/upload', authorization, upload.single('file'), bookController.getPhotoUrl);
 
 //Routes email
 routes.post('/email', sendMailController.execute);

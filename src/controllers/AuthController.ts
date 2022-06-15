@@ -9,10 +9,10 @@ import jwt from 'jsonwebtoken';
 class AuthController {
     async authenticate(req: Request, res: Response) {
        try {
-            const repository = getRepository(User);
-            const { email, password } = req.body;
-
-            const user = await repository.findOne({ email: email });
+           const repository = getRepository(User);
+           const { email, password } = req.body;
+           
+           const user = await repository.findOne({ email: email });
 
             if(!user) {
                 throw new Error("Este email no está registrado");
@@ -29,10 +29,11 @@ class AuthController {
                 email: email,
                 name: user.name 
             }, process.env.JWT_SECRET);
-    
+            delete user.password
+            
             return res.json({ user, token });
        } catch (error) {
-            return res.status(400).json({ message: error.message });
+            return res.status(401).json({ message: error.message });
        }
     }
 
